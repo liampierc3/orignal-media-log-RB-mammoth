@@ -13,6 +13,8 @@ export default function ShooterBins({ videoData, updateVideoLink, onEditEntry }:
   const [expandedBins, setExpandedBins] = useState<string[]>([])
   const [editingLink, setEditingLink] = useState<{ id: string; link: string } | null>(null)
 
+  const shooters = ["Nathan Reed", "Ethan Brooks", "Lucas Taylor", "Ryan Foster", "Daniel Hayes", "Multiple"]
+
   const shooterBins = videoData.reduce((acc, entry) => {
     if (!acc[entry.shooter]) {
       acc[entry.shooter] = []

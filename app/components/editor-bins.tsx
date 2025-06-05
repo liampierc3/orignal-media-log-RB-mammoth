@@ -21,6 +21,8 @@ export default function EditorBins({ videoData, updateVideoLink, onEditEntry }: 
     return acc
   }, {} as Record<string, VideoEntry[]>)
 
+  const editors = ["Marcus Chen", "Sophia Martinez", "Isabella Kim", "Oliver Wright", "Ava Wilson"]
+
   const toggleBin = (editor: string) => {
     setExpandedBins(prev =>
       prev.includes(editor) ? prev.filter(e => e !== editor) : [...prev, editor]

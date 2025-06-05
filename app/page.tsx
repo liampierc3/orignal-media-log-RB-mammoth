@@ -30,7 +30,7 @@ const initialMockData: VideoEntry[] = [
     date: "2024-03-15",
     athlete: "Alex Thompson",
     title: "Park Run - Finals Highlights",
-    shooter: "Liam",
+    shooter: "Nathan Reed",
     editor: "Marcus Chen",
     description: "Finals day highlights package featuring multiple angles and slow motion shots",
     status: "Published",
@@ -42,7 +42,7 @@ const initialMockData: VideoEntry[] = [
     date: "2024-03-14",
     athlete: "Jordan Lee",
     title: "Training Session - New Tricks",
-    shooter: "Nathan Reed",
+    shooter: "Ethan Brooks",
     editor: "Sophia Martinez",
     description: "Capturing new trick progression during morning training session",
     status: "In Progress",
@@ -54,7 +54,7 @@ const initialMockData: VideoEntry[] = [
     date: "2024-03-13",
     athlete: "Sam Parker",
     title: "Competition Run 1",
-    shooter: "Ethan Brooks",
+    shooter: "Lucas Taylor",
     editor: "Isabella Kim",
     description: "First competition run with multiple angles",
     status: "Completed",
@@ -66,7 +66,7 @@ const initialMockData: VideoEntry[] = [
     date: "2024-03-13",
     athlete: "Morgan Chen",
     title: "Style Session",
-    shooter: "Liam",
+    shooter: "Ryan Foster",
     editor: "Oliver Wright",
     description: "Evening style session with sunset lighting",
     status: "In Progress",
@@ -78,7 +78,7 @@ const initialMockData: VideoEntry[] = [
     date: "2024-03-12",
     athlete: "Chris Rodriguez",
     title: "Rail Feature",
-    shooter: "Lucas Taylor",
+    shooter: "Daniel Hayes",
     editor: "Ava Wilson",
     description: "Technical rail section with multiple angles",
     status: "Completed",
@@ -90,7 +90,7 @@ const initialMockData: VideoEntry[] = [
     date: "2024-03-12",
     athlete: "Pat Johnson",
     title: "Jump Line Progression",
-    shooter: "Liam",
+    shooter: "Multiple",
     editor: "Sophia Martinez",
     description: "Full jump line progression with follow cam",
     status: "Published",
@@ -386,10 +386,11 @@ export default function Home() {
                 <SelectValue placeholder="Select shooter" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Liam">Liam</SelectItem>
                 <SelectItem value="Nathan Reed">Nathan Reed</SelectItem>
                 <SelectItem value="Ethan Brooks">Ethan Brooks</SelectItem>
                 <SelectItem value="Lucas Taylor">Lucas Taylor</SelectItem>
+                <SelectItem value="Ryan Foster">Ryan Foster</SelectItem>
+                <SelectItem value="Daniel Hayes">Daniel Hayes</SelectItem>
                 <SelectItem value="Multiple">Multiple</SelectItem>
               </SelectContent>
             </Select>

@@ -26,7 +26,7 @@ export default function EditorBins({ videoData, updateVideoLink, onEditEntry }: 
   // Number of entries to show initially
   const initialEntries = 5
 
-  const editors = ["Drew", "Liam", "Cullen", "Jack", "Marinho"]
+  const editors = ["Marcus Chen", "Sophia Martinez", "Isabella Kim", "Oliver Wright", "Ava Wilson"]
 
   const toggleBin = (editor: string) => {
     setOpenBins((prev) => ({
@@ -156,10 +156,10 @@ export default function EditorBins({ videoData, updateVideoLink, onEditEntry }: 
                               <TableCell>{video.title}</TableCell>
                               <TableCell>{video.shooter}</TableCell>
                               <TableCell onClick={(e) => e.stopPropagation()}>
-                                {video.linkUrl && (
+                                {video.link_url && (
                                   <div className="mb-2">
                                     <a
-                                      href={video.linkUrl}
+                                      href={video.link_url}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="text-blue-600 hover:underline flex items-center gap-1"
@@ -173,7 +173,7 @@ export default function EditorBins({ videoData, updateVideoLink, onEditEntry }: 
                                     type="text"
                                     placeholder="Add/update video link"
                                     value={
-                                      mediaLinks[video.id] !== undefined ? mediaLinks[video.id] : video.linkUrl || ""
+                                      mediaLinks[video.id] !== undefined ? mediaLinks[video.id] : video.link_url || ""
                                     }
                                     onChange={(e) => handleLinkChange(video.id, e.target.value)}
                                     className="text-sm flex-1"
