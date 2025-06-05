@@ -1,0 +1,292 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles */
+.bg-content {
+  background-color: white;
+}
+
+.border-subtle {
+  border-color: #e2e8f0;
+}
+
+.shadow-subtle {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography styles */
+.app-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #111827;
+}
+
+.app-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #4B5563;
+  letter-spacing: -0.01em;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #374151;
+  font-weight: 500;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  color: #1f2937;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* Ensure all text is visible */
+.text-input, 
+.text-content, 
+.text-label {
+  color: #1f2937;
+}
+
+label {
+  color: #374151;
+}
+
+input, textarea {
+  color: #1f2937;
+}
+
+/* Status colors */
+.status-completed {
+  color: #059669;
+}
+
+.status-in-progress {
+  color: #d97706;
+}
+
+.status-published {
+  color: #2563eb;
+}
+
+/* Filter and search section */
+.filter-section {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* Media Bins and Content Sections */
+.media-bin {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.media-bin-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f8f9fa;
+}
+
+.media-bin-content {
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.media-bin-title {
+  color: #111827;
+  font-weight: 600;
+}
+
+.media-bin-subtitle {
+  color: #4B5563;
+  font-size: 0.875rem;
+}
+
+/* Stats Cards */
+.stats-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.stats-title {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.stats-value {
+  color: #111827;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Athlete Content Section */
+.athlete-content {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.athlete-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f8f9fa;
+}
+
+.athlete-name {
+  color: #111827;
+  font-weight: 600;
+}
+
+.athlete-stats {
+  color: #4B5563;
+  font-size: 0.875rem;
+}
+
+.video-entry {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+.video-entry:hover {
+  background-color: #f8f9fa;
+}
+
+.video-title {
+  color: #111827;
+  font-weight: 500;
+}
+
+.video-meta {
+  color: #4B5563;
+  font-size: 0.875rem;
+}
+
+/* Search and Filter Inputs */
+.search-input {
+  color: #1f2937;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+}
+
+.search-input::placeholder {
+  color: #9CA3AF;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge-completed {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.status-badge-in-progress {
+  background-color: #fffbeb;
+  color: #d97706;
+}
+
+.status-badge-published {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+/* Section Headers */
+.section-header {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Action Buttons */
+.action-button {
+  color: #1f2937;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.action-button:hover {
+  background-color: #f8f9fa;
+}
